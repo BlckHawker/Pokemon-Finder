@@ -1,0 +1,331 @@
+@font-face {
+  font-family: PokemonSolid;
+  src: url("./fonts/Pokemon-Solid.ttf");
+}
+
+@font-face {
+  font-family: pixel;
+  src: url("./fonts/leviwindows.ttf");
+}
+
+/* 775 or smaller in width will change to mobile layout */
+@media screen and (max-width: 775px) {
+  #grid {
+    display: grid;
+    grid-template-rows: 25vh 25vh 25vh 25vh;
+    grid-template-columns: 25vh 25vh;
+
+    grid-template-areas:
+      "poke1 poke2"
+      "poke3 poke4"
+      "poke5 poke6"
+      "poke7 poke8"
+      "poke9 poke10"
+      "poke11 poke12"
+      "poke13 poke14"
+      "poke15 poke16"
+      "poke17 poke18"
+      "poke19 poke20";
+
+    margin-left: 2vw;
+    margin-right: 2vh;
+    justify-content: center;
+  }
+
+  #submitButton {
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+    border-top: solid #18cead;
+    border-bottom: solid #18cead;
+    width: 230px;
+    min-width: 175px;
+  }
+}
+
+
+
+@media screen and (min-width: 775px) {
+  #grid {
+    display: grid;
+    grid-template-rows: 25vh 25vh 25vh 25vh 25vh;
+    grid-template-columns: 25vh 25vh 25vh 25vh;
+
+    grid-template-areas:
+      "poke1 poke2 poke3 poke4"
+      "poke5 poke6 poke7 poke8"
+      "poke9 poke10 poke11 poke12"
+      "poke13 poke14 poke15 poke16"
+      "poke17 poke18 poke19 poke20";
+
+    margin-left: 2vw;
+    margin-right: 2vh;
+    justify-content: center;
+
+    margin-bottom: 25px;
+  }
+
+  #poke1,
+  #poke2,
+  #poke3,
+  #poke4 {
+    margin-bottom: 1em;
+  }
+
+  #poke5,
+  #poke6,
+  #poke7,
+  #poke8,
+  #poke9,
+  #poke10,
+  #poke11,
+  #poke12,
+  #poke13,
+  #poke14,
+  #poke15,
+  #poke16 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+  }
+
+  #poke17,
+  #poke18,
+  #poke19,
+  #poke20 {
+    margin-top: 1em;
+  }
+
+  #submitButton {
+    clip-path: polygon(10% 0, 90% 0, 100% 50%, 90% 100%, 10% 100%, 0 50%);
+    border-top: solid #18cead;
+    border-bottom: solid #18cead;
+    width: 230px;
+    min-width: 230px;
+  }
+}
+
+html {
+  background-image: url("./images/backsplash.png");
+
+  background-repeat: repeat;
+  background-size: 100%;
+  min-width: 375px;
+}
+
+#title {
+  font-family: "PokemonSolid";
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  text-align: center;
+  color: white;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: gray;
+  font-size: 80px;
+}
+
+#poke1 {
+  grid-area: poke1;
+}
+
+#poke2 {
+  grid-area: poke2;
+}
+
+#poke3 {
+  grid-area: poke3;
+}
+
+#poke4 {
+  grid-area: poke4;
+}
+
+#poke5 {
+  grid-area: poke5;
+}
+
+#poke6 {
+  grid-area: poke6;
+}
+
+#poke7 {
+  grid-area: poke7;
+}
+
+#poke8 {
+  grid-area: poke8;
+}
+
+#poke9 {
+  grid-area: poke9;
+}
+
+#poke10 {
+  grid-area: poke10;
+}
+
+#poke11 {
+  grid-area: poke11;
+}
+
+#poke12 {
+  grid-area: poke12;
+}
+
+#poke13 {
+  grid-area: poke13;
+}
+
+#poke14 {
+  grid-area: poke14;
+}
+
+#poke15 {
+  grid-area: poke15;
+}
+
+#poke16 {
+  grid-area: poke16;
+}
+
+#poke17 {
+  grid-area: poke17;
+}
+
+#poke18 {
+  grid-area: poke18;
+}
+
+#poke19 {
+  grid-area: poke19;
+}
+
+#poke20 {
+  grid-area: poke20;
+}
+
+.poke {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+.poke p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+}
+
+.image {
+  width: 65%;
+}
+
+select {
+  font-family: pixel;
+  font-size: 30px;
+}
+
+#typeDiv p {
+  margin-block-end: 0px;
+  margin-block-start: 0px;
+  font-family: pixel;
+  font-size: 30px;
+  color: white;
+  min-width: 132px;
+}
+
+.type2,
+.type1 {
+  width: 25%;
+}
+
+.name {
+  font-family: "pixel";
+  font-size: 40px;
+  color: white;
+}
+
+#typeDiv {
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  width: 50%;
+  padding: 10px;
+  text-align: center;
+  gap: 10px;
+}
+
+button {
+  background-color: #394242;
+  color: white;
+  font-family: "pixel";
+  font-size: 35px;
+}
+
+button:hover {
+  background-color: #215963;
+}
+
+#submitButton:hover {
+  border-top: solid #4ad9c4;
+  border-bottom: solid #4ad9c4;
+}
+
+
+
+#submitButton:disabled {
+  border-top: solid gray;
+  border-bottom: solid gray;
+  color: gray;
+}
+
+#previousButt:disabled, #previousButt2:disabled {
+  border-top: solid gray;
+  border-bottom: solid gray;
+  border-right: gray;
+  color: gray;
+}
+
+#previousButt, #previousButt2 {
+  clip-path: polygon(15% 0, 100% 0, 100% 50%, 100% 100%, 15% 100%, 0 50%);
+  border-top: solid #18cead;
+  border-bottom: solid #18cead;
+  border-right: solid #18cead;
+  width: 100px;
+}
+
+#previousButt:hover, #previousButt2:hover {
+  border-top: solid #4ad9c4;
+  border-bottom: solid #4ad9c4;
+  border-right: solid #18cead;
+}
+
+#nextButt:disabled, #nextButt2:disabled {
+  border-top: solid gray;
+  border-bottom: solid gray;
+  border-left: gray;
+  color: gray;
+}
+
+#nextButt:hover, #nextButt2:hover {
+  border-top: solid #4ad9c4;
+  border-bottom: solid #4ad9c4;
+  border-left: solid #4ad9c4;
+}
+
+#nextButt, #nextButt2 {
+  clip-path: polygon(0 0, 80% 0, 100% 50%, 80% 100%, 0 100%, 0 50%);
+  border-top: solid #18cead;
+  border-bottom: solid #18cead;
+  border-left: solid #18cead;
+  width: 75px;
+}
+
+#pageIndex {
+  color: white;
+  text-align: center;
+}
+
+#buttons {
+  display: flex;
+  justify-content: center;
+  margin: 20px 0px;
+  gap: 20px
+}

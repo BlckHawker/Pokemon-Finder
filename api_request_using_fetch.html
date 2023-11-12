@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <button type="button">Holidays!</button>
+  <ol id="holidays"></ol>
+
+  <script>
+    const apiURL = 'https://holidays.abstractapi.com/v1/';
+    const apiKey = '3d69b9592b2940759abb2b9b31cca9f3';
+    const country = 'US';
+
+    // https://holidays.abstractapi.com/v1/?api_key=YOUR_UNIQUE_API_KEY&country=SG
+    const makeARequestToTheAPI = (year, month, day) => {
+      const requestURL = `${apiURL}?api_key=${apiKey}&country=${country}&year=${year}&month=${month}&day=${day}`;
+
+      return fetch(requestURL)
+        .then(actualResults => {
+          const parsedResults = actualResults.json();
+        
+          return parsedResults;
+        })
+        .then(actualActualParsedResults => {
+          return actualActualParsedResults;
+        })
+    };
+
+    const button = document.querySelector('button');
+    button.addEventListener('click', e => {
+      const requestPromise = makeARequestToTheAPI('2022', '10', '31');
+
+      requestPromise.then(holidays => {  
+        // convert the retrieved holidays into HTML      
+        const listHTML = `
+          ${holidays
+              .map(holiday => {
+                const name = holiday.name;
+
+                return `<li>${name}</li>`;
+              })
+              .join('')
+            }
+        `;
+
+        // Add that HTML to the DOM
+        document.querySelector('#holidays')
+          .innerHTML = listHTML;
+      });
+    });
+
+
+  </script>
+</body>
+</html>
